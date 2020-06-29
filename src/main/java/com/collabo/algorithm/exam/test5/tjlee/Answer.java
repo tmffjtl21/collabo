@@ -1,11 +1,11 @@
-package com.collabo.algorithm.exam.tjlee;
+package com.collabo.algorithm.exam.test5.tjlee;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class exam_20200629 {
+public class Answer {
     public static void main(String[] args) {
 
         Integer[] ints = {2, 5, 6, 1, 10};
