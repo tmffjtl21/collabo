@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Answer {
     public static void main(String[] args) {
-        System.out.println(input(3));
+        System.out.println(input(2));
     }
 
     private static String input(int s) {
@@ -18,11 +18,9 @@ public class Answer {
             stringList.add(")");
         }
 
-        Set<String> output = new HashSet<>();
+        List<String> output = new ArrayList<>();
 
-        int n = stringList.size();
-        int r = stringList.size();
-        doCombination(stringList, n, r, 0, 0, output);
+        permutation(stringList, output,0, stringList.size(), stringList.size());
 
         Set<String> output2 = new HashSet<>();
         for (String s1 : output) {
@@ -33,13 +31,23 @@ public class Answer {
         return output2.toString();
     }
 
-    public static void doCombination(List<String> stringList, int n, int r, int index, int target, Set<String> output){
-
-        if(r == 0 || target == n){
-        }else{
-            doCombination(stringList, n, r-1, index+1, target+1, output);
-            doCombination(stringList, n, r, index, target+1, output);
+    static List<String> permutation(List<String> input, List<String> output,  int depth, int n, int r) {
+        if (depth == r) {
+            return output;
         }
+        for (int i=depth; i<n; i++) {
+            swap(input, depth, i);
+            output.add(input.toString());
+            permutation(input, output,depth + 1, n, r);
+            swap(input, depth, i);
+        }
+        return null;
+    }
+
+    static void swap(List<String> arr, int depth, int i) {
+        String temp = arr.get(depth);
+        arr.set(depth, arr.get(i));
+        arr.set(i, temp);
     }
 
     private static Boolean verification(String val){
