@@ -2,26 +2,23 @@ package com.collabo.algorithm.exam.test12.tjlee;
 
 public class Answer {
 
-    private static int value = 4;
+    private static int value = 40;
     private static int[] base = new int[value + 1];
 
     private static int base_one = 0;
     private static int base_zero = 0;
 
     public static void main(String[] args) {
-//        long time = System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         int n = 0;
-
-
-
         while (n < value){
             n ++;
-//            base[n] = fibonacci(n);
-            System.out.println(fibonacci2(n, base_one, base_zero));
-            System.out.println("base_zero : " + base_zero + ", base_one : " + base_one);
+            base[n] = fibonacci(n);
+//            System.out.println(fibonacci2(n, base_one, base_zero));
+//            System.out.println("base_zero : " + base_zero + ", base_one : " + base_one);
         }
         System.out.println(base[value]);
-//        System.out.println((System.currentTimeMillis() - time) + "ms");
+        System.out.println((System.currentTimeMillis() - time) + "ms");
     }
 
     private static int fibonacci(int n) {
