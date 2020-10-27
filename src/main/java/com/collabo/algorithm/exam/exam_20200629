@@ -7,3 +7,6 @@ Given an array of integers and a target integer, find two indexes of the array e
 
 Input: [2, 5, 6, 1, 10], 타겟 8
 Output: [0, 2] // 배열[0] + 배열[2] = 8
+
+
+https://devth-preview.goorm.io/exam/53763/devth-preview-kor/quiz/1?_ga=2.182807846.1226950159.1603432552-1996813448.1603432552

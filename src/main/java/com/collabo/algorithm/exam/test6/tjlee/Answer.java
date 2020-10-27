@@ -9,8 +9,8 @@ import java.util.Arrays;
 //        Output: 5
 public class Answer {
     public static void main(String[] args) {
-//        int[] array = {10, 4, 5, 3, -1};
-        int[] array = {3, 3, 3};
+        int[] array = {10, 4, 5, 3, -1};
+//        int[] array = {3, 3, 3};
         Arrays.sort(array);
 
         String answer = "Does not exist.";
